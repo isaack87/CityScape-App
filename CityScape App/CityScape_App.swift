@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct CityScape_AppApp: App {
+struct CityScape_App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchView()
         }
     }
 }
