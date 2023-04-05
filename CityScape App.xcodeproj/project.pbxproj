@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A24764129DB75B0006BF8B3 /* CityScape_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A24764029DB75B0006BF8B3 /* CityScape_App.swift */; };
-		9A24764329DB75B0006BF8B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A24764229DB75B0006BF8B3 /* ContentView.swift */; };
+		9A24764129DB75B0006BF8B3 /* CityScapeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A24764029DB75B0006BF8B3 /* CityScapeApp.swift */; };
+		9A24764329DB75B0006BF8B3 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A24764229DB75B0006BF8B3 /* LaunchView.swift */; };
 		9A24764529DB75B1006BF8B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A24764429DB75B1006BF8B3 /* Assets.xcassets */; };
 		9A24764829DB75B1006BF8B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A24764729DB75B1006BF8B3 /* Preview Assets.xcassets */; };
+		9A24765329DB77C0006BF8B3 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A24765229DB77C0006BF8B3 /* ContentModel.swift */; };
+		9A24765629DE2FB5006BF8B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A24765529DE2FB5006BF8B3 /* Constants.swift */; };
+		9A24765829DE3095006BF8B3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9A24765729DE3095006BF8B3 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9A24763D29DB75B0006BF8B3 /* CityScape App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CityScape App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A24764029DB75B0006BF8B3 /* CityScape_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityScape_App.swift; sourceTree = "<group>"; };
-		9A24764229DB75B0006BF8B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9A24764029DB75B0006BF8B3 /* CityScapeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityScapeApp.swift; sourceTree = "<group>"; };
+		9A24764229DB75B0006BF8B3 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		9A24764429DB75B1006BF8B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A24764729DB75B1006BF8B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9A24765229DB77C0006BF8B3 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		9A24765529DE2FB5006BF8B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9A24765729DE3095006BF8B3 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,7 @@
 			isa = PBXGroup;
 			children = (
 				9A24763F29DB75B0006BF8B3 /* CityScape App */,
+				9A24765729DE3095006BF8B3 /* .gitignore */,
 				9A24763E29DB75B0006BF8B3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,8 +58,9 @@
 		9A24763F29DB75B0006BF8B3 /* CityScape App */ = {
 			isa = PBXGroup;
 			children = (
-				9A24764029DB75B0006BF8B3 /* CityScape_App.swift */,
+				9A24764029DB75B0006BF8B3 /* CityScapeApp.swift */,
 				9A24765029DB76AF006BF8B3 /* ViewModels */,
+				9A24765429DE2FA1006BF8B3 /* Helpers */,
 				9A24764F29DB76AA006BF8B3 /* Views */,
 				9A24764E29DB7696006BF8B3 /* Models */,
 				9A24764429DB75B1006BF8B3 /* Assets.xcassets */,
@@ -79,7 +87,7 @@
 		9A24764F29DB76AA006BF8B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9A24764229DB75B0006BF8B3 /* ContentView.swift */,
+				9A24764229DB75B0006BF8B3 /* LaunchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -87,8 +95,17 @@
 		9A24765029DB76AF006BF8B3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9A24765229DB77C0006BF8B3 /* ContentModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9A24765429DE2FA1006BF8B3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9A24765529DE2FB5006BF8B3 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A24764829DB75B1006BF8B3 /* Preview Assets.xcassets in Resources */,
+				9A24765829DE3095006BF8B3 /* .gitignore in Resources */,
 				9A24764529DB75B1006BF8B3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,8 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A24764329DB75B0006BF8B3 /* ContentView.swift in Sources */,
-				9A24764129DB75B0006BF8B3 /* CityScape_App.swift in Sources */,
+				9A24764329DB75B0006BF8B3 /* LaunchView.swift in Sources */,
+				9A24764129DB75B0006BF8B3 /* CityScapeApp.swift in Sources */,
+				9A24765329DB77C0006BF8B3 /* ContentModel.swift in Sources */,
+				9A24765629DE2FB5006BF8B3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,10 +314,11 @@
 				DEVELOPMENT_TEAM = 3D54N7DNJ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "ask user to allow location permissions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -323,10 +344,11 @@
 				DEVELOPMENT_TEAM = 3D54N7DNJ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "ask user to allow location permissions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
