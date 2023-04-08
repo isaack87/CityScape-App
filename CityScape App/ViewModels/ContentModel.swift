@@ -11,6 +11,9 @@ import CoreLocation
 class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
 
     var locationManager = CLLocationManager()
+    
+    @Published var restraunts = [Business]()
+    @Published var sights = [Business]()
 
     // overriding init
     override init() {
@@ -96,11 +99,29 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
             
         // check if there isnt an error
             if error == nil {
-                print(response)
-    
-        }
-        
+                do {
+                    // parse json
+                    let decoder = JSONDecoder()
+                    let result = try decoder.decode(BusinessSearch.self, from: data!)
+                    
+                    DispatchQueue.main.async {
+                        
+                        switch category {
+                        case Constants.sightsKey:
+                            self.sights = result.businesses
+                        case Constants.restrauntsKey:
+                            self.restraunts = result.businesses
+                        default:
+                            break
+                        }
+                    }
+                    print(result)
+            
+                } catch {
+                    print(error)
 
+                }
+            }
         }
             // start data task
             dataTask.resume()
