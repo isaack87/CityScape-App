@@ -6,16 +6,30 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct LaunchView: View {
+    
+    @EnvironmentObject var model:ContentModel
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+
+        // TODO: detect authorization status of geolocating user
+        
+        if (model.authorizationState == .notDetermined) {
+            // if undetermined, show onboarding
         }
-        .padding()
+        else if model.authorizationState == .authorizedAlways || model.authorizationState == .authorizedWhenInUse {
+            
+            // if approved, show the dashboard.homeview
+            HomeView()
+        }
+        else {
+            // if denied sow denied view
+            
+
+        }
+
     }
 }
 

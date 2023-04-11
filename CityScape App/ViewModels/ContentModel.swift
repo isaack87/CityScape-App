@@ -12,6 +12,8 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
 
     var locationManager = CLLocationManager()
     
+    @Published var authorizationState = CLAuthorizationStatus.notDetermined
+    
     @Published var restraunts = [Business]()
     @Published var sights = [Business]()
 
@@ -31,6 +33,10 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
     // MARK - Location Manager Delegate Methods
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        
+        // Update the authorizationState property
+        authorizationState = locationManager.authorizationStatus
+        
         
         if locationManager.authorizationStatus == .authorizedAlways ||
             locationManager.authorizationStatus == .authorizedWhenInUse {
@@ -57,7 +63,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
             locationManager.stopUpdatingLocation()
             
             // If we have corrs of the user, send to Yelp API
-            // getBusinesses(category: "arts", location: userLocation!)
+            getBusinesses(category: "arts", location: userLocation!)
             getBusinesses(category: "restaurants", location: userLocation!)
         }
         
@@ -104,13 +110,24 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
                     let decoder = JSONDecoder()
                     let result = try decoder.decode(BusinessSearch.self, from: data!)
                     
+                    // sort businesses
+                    var businesses = result.businesses
+                    businesses.sort{ (b1, b2) -> Bool in
+                        return b1.distance ?? 0 < b2.distance ?? 0
+                    }
+                    
+                    // call get image function
+                    for b in result.businesses {
+                        b.getImageData()
+                    }
+                    
                     DispatchQueue.main.async {
                         
                         switch category {
                         case Constants.sightsKey:
-                            self.sights = result.businesses
-                        case Constants.restrauntsKey:
-                            self.restraunts = result.businesses
+                            self.sights = businesses
+                        case Constants.restaurantsKey:
+                            self.restraunts = businesses
                         default:
                             break
                         }
