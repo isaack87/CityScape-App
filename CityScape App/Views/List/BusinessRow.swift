@@ -31,11 +31,7 @@ struct BusinessRow: View {
                         .bold()
                     Text("\(calculateDistance(meter: business.distance ?? 0)) miles away")
                         .font(.caption)
-                    
-                    
                 }
-                
-                
                 Spacer()
                 
                 // star rating and number of reviews
@@ -48,6 +44,7 @@ struct BusinessRow: View {
             }
             Divider()
         }
+        .foregroundColor(.black)
     }
     
 }

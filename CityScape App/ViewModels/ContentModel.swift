@@ -86,7 +86,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
             URLQueryItem(name: "latitude", value: String(location.coordinate.latitude)),
             URLQueryItem(name: "longitude", value: String(location.coordinate.longitude)),
             URLQueryItem(name: "categories", value: category),
-            URLQueryItem(name: "limit", value: "6")
+            URLQueryItem(name: "limit", value: "10")
         ]
         
         let url = urlComponents?.url
@@ -99,7 +99,6 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
       
         // Get URLSessions
         let session = URLSession.shared
-        
         // Create data task
         let dataTask = session.dataTask(with: request) { (data, response, error) in
             
@@ -109,6 +108,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
                     // parse json
                     let decoder = JSONDecoder()
                     let result = try decoder.decode(BusinessSearch.self, from: data!)
+                    
                     
                     // sort businesses
                     var businesses = result.businesses
@@ -123,6 +123,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
                     
                     DispatchQueue.main.async {
                         
+                        print(businesses)
                         switch category {
                         case Constants.sightsKey:
                             self.sights = businesses
@@ -132,8 +133,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
                             break
                         }
                     }
-                    print(result)
-            
+                
                 } catch {
                     print(error)
 

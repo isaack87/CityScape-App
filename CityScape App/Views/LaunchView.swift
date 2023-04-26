@@ -10,7 +10,7 @@ import CoreLocation
 
 struct LaunchView: View {
     
-    @EnvironmentObject var model:ContentModel
+    @EnvironmentObject var model: ContentModel
     
     var body: some View {
 
