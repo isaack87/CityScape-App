@@ -16,11 +16,8 @@ struct HomeView: View {
     
     var body: some View {
 
-        
         if model.restraunts.count != 0 || model.sights.count != 0 {
-            
             NavigationView {
-                
                 // determine if we show list or map view on homescreen
                 if !isMapShowing {
                     // show list
@@ -40,15 +37,37 @@ struct HomeView: View {
                     .padding([.horizontal, .top])
                     
                 } else {
-                    // show map
-                    BusinessMap(selectedBusiness: $selectedBusiness)
-                        .ignoresSafeArea()
-                        .sheet(item: $selectedBusiness) { business in
-                            //create business detail view instance
-                            //pass in selected business
-                            BusinessDetail(business: business)
+                    
+                    ZStack(alignment: .top)  {
+                        // show map
+                        BusinessMap(selectedBusiness: $selectedBusiness)
+                            .ignoresSafeArea()
+                            .sheet(item: $selectedBusiness) { business in
+                                //create business detail view instance
+                                //pass in selected business
+                                BusinessDetail(business: business)
+                            }
+                            
+                        // rectangle overlay here
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(.white)
+                                .cornerRadius(5)
+                                .frame(height:48)
+                            
+                            HStack {
+                                Image(systemName: "location")
+                                Text("San Francisco")
+                                Spacer()
+                                Button("Switch to list View") {
+                                    self.isMapShowing = false
+                                }
+                            }
+                            .padding()
                         }
-                        
+                        .padding()
+                    }
+                    .navigationBarHidden(true)
                 }
             }
         } else {
