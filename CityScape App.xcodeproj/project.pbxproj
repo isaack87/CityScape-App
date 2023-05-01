@@ -107,6 +107,7 @@
 		9A24764F29DB76AA006BF8B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9A2476A929E5EF5A006BF8B3 /* Detail */,
 				9A24766329E49827006BF8B3 /* List */,
 				9A24765F29E48537006BF8B3 /* Onboarding */,
 				9A24765E29E4852F006BF8B3 /* Home */,
@@ -162,7 +163,6 @@
 				9A24766629E5D737006BF8B3 /* BusinessSectionHeader.swift */,
 				9A24766829E5D7C9006BF8B3 /* BusinessSection.swift */,
 				9A2476A729E5DEC2006BF8B3 /* BusinessRow.swift */,
-				9A2476A929E5EF5A006BF8B3 /* Detail */,
 			);
 			path = List;
 			sourceTree = "<group>";
