@@ -24,17 +24,25 @@ struct HomeView: View {
                     VStack (alignment: .leading) {
                         HStack {
                             Image(systemName: "location")
-                            Text("San Francisco")
+                            Text(model.placemark?.locality ?? "")
                             Spacer()
                             Button("Switch to map View") {
                                 self.isMapShowing = true
                             }
                         }
                         Divider()
-                        BusinessList()
-                            .ignoresSafeArea()
+                        
+                        ZStack(alignment: .top) {
+                            BusinessList()
+                            
+                            HStack {
+                                Spacer()
+                                YelpAttribution(link: "https://yelp.ca")
+                            }
+                        }
                     }
                     .padding([.horizontal, .top])
+                    .navigationBarHidden(true)
                     
                 } else {
                     
@@ -57,7 +65,7 @@ struct HomeView: View {
                             
                             HStack {
                                 Image(systemName: "location")
-                                Text("San Francisco")
+                                Text(model.placemark?.locality ?? "")
                                 Spacer()
                                 Button("Switch to list View") {
                                     self.isMapShowing = false

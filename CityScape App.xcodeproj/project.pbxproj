@@ -25,6 +25,10 @@
 		9A654D6129FF4BE90079BA0E /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A654D6029FF4BE90079BA0E /* DirectionView.swift */; };
 		9A654D6329FF4C380079BA0E /* BusinessTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A654D6229FF4C380079BA0E /* BusinessTitle.swift */; };
 		9A654D6729FF52D70079BA0E /* DirectionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A654D6629FF52D70079BA0E /* DirectionsMap.swift */; };
+		9A654D692A0312520079BA0E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A654D682A0312520079BA0E /* OnboardingView.swift */; };
+		9A654D6B2A03187F0079BA0E /* LocationDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A654D6A2A03187F0079BA0E /* LocationDeniedView.swift */; };
+		9AAACA782A031F3E00659522 /* YelpAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAACA772A031F3E00659522 /* YelpAttribution.swift */; };
+		9AAACA7A2A03210900659522 /* DashDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAACA792A03210900659522 /* DashDivider.swift */; };
 		9AE0A5AE29F8586200E088AA /* BusinessMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0A5AD29F8586200E088AA /* BusinessMap.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +52,10 @@
 		9A654D6029FF4BE90079BA0E /* DirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
 		9A654D6229FF4C380079BA0E /* BusinessTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTitle.swift; sourceTree = "<group>"; };
 		9A654D6629FF52D70079BA0E /* DirectionsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsMap.swift; sourceTree = "<group>"; };
+		9A654D682A0312520079BA0E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		9A654D6A2A03187F0079BA0E /* LocationDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeniedView.swift; sourceTree = "<group>"; };
+		9AAACA772A031F3E00659522 /* YelpAttribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpAttribution.swift; sourceTree = "<group>"; };
+		9AAACA792A03210900659522 /* DashDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashDivider.swift; sourceTree = "<group>"; };
 		9AE0A5AD29F8586200E088AA /* BusinessMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +121,7 @@
 		9A24764F29DB76AA006BF8B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9AAACA762A031F2C00659522 /* Common */,
 				9A2476A929E5EF5A006BF8B3 /* Detail */,
 				9A24766329E49827006BF8B3 /* List */,
 				9A24765F29E48537006BF8B3 /* Onboarding */,
@@ -142,6 +151,7 @@
 		9A24765D29E48527006BF8B3 /* Denied */ = {
 			isa = PBXGroup;
 			children = (
+				9A654D6A2A03187F0079BA0E /* LocationDeniedView.swift */,
 			);
 			path = Denied;
 			sourceTree = "<group>";
@@ -158,6 +168,7 @@
 		9A24765F29E48537006BF8B3 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				9A654D682A0312520079BA0E /* OnboardingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -181,6 +192,15 @@
 				9A654D6229FF4C380079BA0E /* BusinessTitle.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		9AAACA762A031F2C00659522 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9AAACA772A031F3E00659522 /* YelpAttribution.swift */,
+				9AAACA792A03210900659522 /* DashDivider.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		9AE0A5AC29F8584F00E088AA /* Map */ = {
@@ -269,15 +289,19 @@
 				9A654D6129FF4BE90079BA0E /* DirectionView.swift in Sources */,
 				9A24766229E4854E006BF8B3 /* HomeView.swift in Sources */,
 				9A24764129DB75B0006BF8B3 /* CityScapeApp.swift in Sources */,
+				9A654D6B2A03187F0079BA0E /* LocationDeniedView.swift in Sources */,
 				9A24766729E5D737006BF8B3 /* BusinessSectionHeader.swift in Sources */,
 				9A24765329DB77C0006BF8B3 /* ContentModel.swift in Sources */,
+				9AAACA7A2A03210900659522 /* DashDivider.swift in Sources */,
 				9A2476AB29E5EF9D006BF8B3 /* BusinessDetail.swift in Sources */,
 				9A24765A29DE33B2006BF8B3 /* Business.swift in Sources */,
 				9A654D6329FF4C380079BA0E /* BusinessTitle.swift in Sources */,
 				9A24766529E4984A006BF8B3 /* BusinessList.swift in Sources */,
 				9AE0A5AE29F8586200E088AA /* BusinessMap.swift in Sources */,
 				9A24766929E5D7C9006BF8B3 /* BusinessSection.swift in Sources */,
+				9AAACA782A031F3E00659522 /* YelpAttribution.swift in Sources */,
 				9A24765629DE2FB5006BF8B3 /* Constants.swift in Sources */,
+				9A654D692A0312520079BA0E /* OnboardingView.swift in Sources */,
 				9A24765C29DE3623006BF8B3 /* BusinessSearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +440,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,6 +471,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

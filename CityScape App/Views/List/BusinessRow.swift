@@ -42,7 +42,8 @@ struct BusinessRow: View {
                 }
                 
             }
-            Divider()
+            DashDivider()
+                .padding()
         }
         .foregroundColor(.black)
     }
